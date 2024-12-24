@@ -1,0 +1,45 @@
+.subscribe-heading {
+    @include section-heading(50px);
+}
+
+.subscribe-text {
+    @include paragraph(#909090, 20px);
+}
+
+.subscribe{
+    @media (min-width:1440px) {
+        padding: 3rem;
+    }
+
+    @media (min-width:1920px) {
+        padding:7rem 13.8rem;
+    }
+
+    &-container {
+        background-color: #FAFAFA;
+    }
+.subscribe-form {
+    &-button {
+        @include button(18px,20.55px,#fff,#6F77F1);
+    }
+
+    &-input {
+        border:1px solid #C3C6D0;
+        width: 90%;
+
+        @media (min-width:1024px) {
+           width: 320px; 
+        }
+
+        @media (min-width:1440px) {
+            width: 416px; 
+        }
+
+        @include paragraph(#727272, 19px);
+
+        &::placeholder {
+            @include paragraph(#727272, 19px);
+        }
+    }
+}
+}

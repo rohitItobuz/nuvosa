@@ -1,0 +1,68 @@
+@import 'mixins';
+.management-card-header {
+  img {
+    width: 80px;
+
+    @media (min-width: 1400px) {
+      width: 120px;
+    }
+
+    @media (min-width: 1920px) {
+      width: unset;
+    }
+  }
+
+  h2 {
+    color: #212528;
+
+    @media (min-width: 768px) {
+      font-size: 24px;
+      max-width: 180px;
+    }
+
+    @media (min-width: 1200px) {
+      font-size: 28px;
+    }
+
+    @media (min-width: 1400px) {
+      max-width: 220px;
+      font-size: 32px;
+    }
+
+    @media (min-width: 1920px) {
+      max-width: 250px;
+      font-size: 38px;
+    }
+  }
+}
+
+.management-card {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 10px -1px, rgba(0, 0, 0, 0.02) 0px 2px 4px -1px;
+  max-width: 480px;
+  transition: all 0.3s ease;
+
+  @media (min-width: 992px) {
+    width: 33.33%;
+  }
+
+  @media (min-width: 1400px) {
+    max-width: 513px;
+  }
+
+  button {
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #cfd0ff;
+    }
+  }
+
+  p {
+    @include paragraph(#828282, 17px);
+  }
+
+  &:hover {
+    transform: scale(1.01);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+  }
+}

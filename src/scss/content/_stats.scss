@@ -1,0 +1,35 @@
+@import 'mixins';
+
+.stats-card-number {
+    font-size: 50px;
+    color: #666565;
+
+    @media (min-width:1024px) {
+        font-size: 60px;
+    }
+
+    @media (min-width:1024px) {
+        font-size: 72px;
+    }
+}
+
+.stats-card-text {
+    font-size: 14px;
+
+    @media (min-width:768px) {
+        font-size: 16px;
+    }
+
+    @include paragraph(#6F6F6F, 17px);
+}
+
+.stats {
+    border: 1px solid #E1E1E1;
+    max-width: 1165px;
+}
+
+.stats-card-container {
+    @media (min-width:768px) {
+        width: 50%;
+    }
+}

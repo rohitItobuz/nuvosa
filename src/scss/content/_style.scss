@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Poppins', sans-serif;
+}
+
+@import 'mixins';
+
+@import 'navbar';
+
+@import 'hero';
+
+@import 'management';
+
+@import 'optimising';
+
+@import 'business';
+
+@import 'grow';
+
+@import 'choose-us';
+
+@import 'need';
+
+@import 'stats';
+
+@import 'speed';
+
+@import 'plans';
+
+@import 'clients';
+
+@import 'members';
+
+@import 'subscribe';
+
+@import 'footer';
+
+.body-container {
+  max-width: 1920px;
+  margin: auto;
+}
+
+.section-wrapper {
+  @media (min-width: 1920px) {
+    margin: 0px 128px;
+
+    .nav-section {
+      margin: 2.5rem 0px !important;
+    }
+
+    .hero-container {
+      margin: 2rem 0px !important;
+    }
+
+    .management-container {
+      margin: 130px 0px !important;
+    }
+
+    .optimising-container {
+      margin: 2rem 0px !important;
+    }
+
+    .need-container {
+      margin: 7rem 0px !important;
+    }
+
+    .speed-container {
+      margin:  5rem 0rem 0rem !important;
+    }
+
+    .footer-container {
+      margin:0px !important;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.footer {
+  &-link,
+  &-copyright-link {
+    text-decoration: none;
+    transition: color 0.3s ease;
+    &:hover {
+      color: #6f77f1;
+    }
+  }
+
+  &-link {
+    @include paragraph(#212528, 20px);
+  }
+
+  &-copyright,
+  &-copyright-link {
+    font-size: 12px;
+    @include paragraph(#828282, 13px);
+  }
+}
+
+.footer-container {
+  &-logo {
+    @include logo(43px);
+  }
+}

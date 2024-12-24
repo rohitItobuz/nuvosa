@@ -1,0 +1,43 @@
+@import 'mixins';
+
+.grow-card {
+    max-width: 368px;
+    transition: all 0.3s ease;
+
+    @media (min-width:768px) {
+        width: 33.33%;
+    }
+
+    &:hover {
+        transform: scale(1.01);
+       box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    }
+}
+
+.grow-card-heading {
+    font-size: 18px;
+    color: #212528;
+
+    @media (min-width:1024px) {
+        font-size: 22px;
+    }
+}
+
+.grow-card-link {
+    font-size: 14px;
+    color:#6F77F1;
+}
+
+.grow-card-text{
+    @include paragraph(#828282,17px)
+}
+
+.grow-rectangle-top {
+    top:-40px;
+    right: 0px;
+}
+
+.grow-rectangle-bottom {
+    left:25%;
+    bottom: -60px;
+}

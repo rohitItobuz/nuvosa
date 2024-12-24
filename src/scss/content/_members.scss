@@ -1,0 +1,53 @@
+@import 'mixins';
+
+.members-card-icon {
+  transition: all 0.2s ease;
+
+  &:hover {
+    filter: brightness(0) saturate(100%) invert(56%) sepia(41%) saturate(6334%) hue-rotate(216deg) brightness(97%) contrast(94%);
+  }
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.members-card {
+  border: 1px solid #efefef;
+  padding-left: 37px;
+  padding-right: 37px;
+  padding-bottom: 34px;
+  transition: all 0.4s ease;
+
+  &:hover {
+    .members-card-heading {
+      color: #6f77f1;
+    }
+
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  }
+}
+
+.members-card-heading {
+  font-size: 20px;
+  transition: all 0.4s ease;
+
+  @media (min-width: 1440px) {
+    font-size: 22px;
+  }
+}
+
+.members-card-text {
+  font-size: 15px;
+  color: #a3a2a2;
+}
+
+.members-text {
+  max-width: 600px;
+  @include paragraph(#828282, 17px);
+}
+
+.members-heading {
+  @include section-heading();
+}

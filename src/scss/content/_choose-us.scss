@@ -1,0 +1,55 @@
+@import 'mixins';
+
+.choose-us {
+  background-color: #fafafa;
+}
+
+.choose-us-heading {
+  @include section-heading();
+}
+
+.choose-us-text {
+  max-width: 850px;
+  @media (min-width: 1440px) {
+    max-width: 902px;
+  }
+
+  @include paragraph(#828282, 17px);
+}
+
+.choose-us-card {
+  background-color: #fff;
+  max-width: 450px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: scale(1.01);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  }
+
+  @media (min-width: 1024px) {
+    max-width: 365px;
+  }
+
+  .choose-us-card-button {
+    @include button(14px, 14px);
+    font-size: 14px;
+  }
+}
+
+.choose-us-card-heading {
+  font-size: 20px;
+  color: #212528;
+}
+
+.choose-us-card-image {
+  width: 100%;
+
+  @media (min-width: 1200px) {
+    width: unset;
+  }
+}
+
+.choose-us-card-text {
+  @include paragraph(#828282, 17px);
+}

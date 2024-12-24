@@ -1,0 +1,92 @@
+.business-image {
+  width: 286px;
+  transition: all 0.4s ease;
+
+  &:hover {
+    transform: scale(1.03);
+  }
+
+  @media (min-width: 1024px) {
+    width: 450px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 601px;
+  }
+}
+
+.business {
+  background-color: #fafafa;
+  background-image: url(/src/images/design/bg-curve.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 5rem;
+
+  .business-content-button {
+    @include button();
+
+    @media (min-width:1440px) {
+        padding: 20px 40px !important;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    margin-top: 8rem;
+  }
+
+  @media (min-width: 1200px) {
+    margin-top: 3.5rem;
+  }
+
+  @media (min-width: 1440px) {
+    margin-top: 7rem;
+  }
+
+  @media (min-width: 1920px) {
+    margin-top: 12rem;
+  }
+
+  &-content {
+    @media (min-width: 768px) {
+      width: 380px;
+    }
+
+    @media (min-width: 1024px) {
+      width: 450px;
+    }
+
+    @media (min-width: 1440px) {
+      width: 601px;
+    }
+
+    &-heading {
+      @include section-heading();
+
+      @media (min-width: 768px) {
+        width: 340px;
+      }
+
+      @media (min-width: 1024px) {
+        width: 350px;
+      }
+
+      @media (min-width: 1440px) {
+        width: 460px;
+      }
+
+      @media (min-width: 1440px) {
+        width: 550px;
+      }
+    }
+
+    &-text {
+      max-width: 560px;
+
+      @media (min-width: 1440px) {
+        max-width: 601px;
+      }
+
+      @include paragraph(#828282, 17px);
+    }
+  }
+}

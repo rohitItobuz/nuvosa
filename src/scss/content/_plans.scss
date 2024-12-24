@@ -1,0 +1,134 @@
+.plans {
+  background-color: #fafafa;
+}
+
+.plans-card {
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+
+  &-button {
+    font-size: 14px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 372px;
+  }
+
+  &::before {
+    content: '';
+    width: 450px;
+    height: 130px;
+    background-color: #757df0;
+    position: absolute;
+    bottom: 70px;
+    left: -60px;
+    z-index: -1;
+    transform: rotate(15deg);
+    border-radius: 50%;
+    transition: all 0.4s ease;
+    opacity: 0;
+  }
+
+  &::after {
+    content: '';
+    width: 100%;
+    height: 27%;
+    background-color: #6069ec;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    z-index: -2;
+    transition: all 0.4s ease;
+    border-top-right-radius: 50px;
+    opacity: 0;
+  }
+
+  &:hover {
+    background-color: #6f77f1;
+    transform: scaleY(1.1);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+
+    &::after,
+    &::before {
+      opacity: 1;
+    }
+
+    .plans-card-heading,
+    .plans-card-details,
+    .plans-card-price {
+      color: white;
+    }
+
+    .plans-card-button {
+      @include button(14px, 14px);
+      border: none;
+    }
+  }
+}
+
+.plans-card,
+.plans-card-heading,
+.plans-card-details,
+.plans-card-price,
+.plans-card-button {
+  transition: all 0.5s ease;
+}
+
+.plans-card-heading {
+  font-size: 20px;
+  color: #6f77f1;
+
+  @media (min-width: 1440px) {
+    font-size: 22px;
+  }
+}
+
+.plans-card-price {
+  color: #212528;
+  font-size: 40px;
+
+  @media (min-width: 768px) {
+    font-size: 49px;
+  }
+
+  sub {
+    font-size: 16px;
+  }
+
+  sup {
+    font-size: 16px;
+    vertical-align: super;
+  }
+}
+
+.plans-card-details {
+  @include paragraph(#828282, 17px);
+}
+
+.plans-text {
+  @include paragraph(#828282, 17px);
+}
+
+.plans-heading {
+  @include section-heading();
+}
+
+.plans-red-circle {
+  right: 200px;
+}
+
+.plans-green-rectangle {
+  left: 26%;
+  bottom: -10px;
+}
+
+.plans-lavender-rectangle {
+  width: 26px;
+  top: 40px;
+  left: 12%;
+
+  @media (min-width: 1440px) {
+    top: 130px;
+  }
+}

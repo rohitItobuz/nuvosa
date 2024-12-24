@@ -1,0 +1,74 @@
+@mixin card-hover($color) {
+  &::after {
+    background-color: $color;
+    width: 100%;
+  }
+}
+
+@mixin button($font-size-small: 20px, $font-size-large: 24px, $color: #212528, $bg-color: #fad725) {
+  background-color: $bg-color;
+  color: $color;
+
+  &:hover {
+    background-color: darken($bg-color, 10%);
+  }
+
+  @media (min-width: 1200px) {
+    font-size: $font-size-small;
+  }
+
+  @media (min-width: 1920px) {
+    font-size: $font-size-large;
+  }
+}
+
+@mixin section-heading($large-font-size: 55px) {
+  span {
+    color: #6f77f1;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 36px;
+  }
+
+  @media (min-width: 1440px) {
+    font-size: 46px;
+  }
+
+  @media (min-width: 1920px) {
+    font-size: $large-font-size;
+  }
+}
+
+@mixin paragraph($color, $font-size) {
+  color: $color;
+
+  @media (min-width: 1440px) {
+    font-size: $font-size;
+  }
+}
+
+@mixin logo($font-size: 40px) {
+  font-size: 28px;
+  color: #212528;
+
+  &::after {
+    content: '';
+    width: 11px;
+    height: 11px;
+    background-color: #bc424e;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    right: -12px;
+    transform: translateY(-35%);
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 32px;
+  }
+
+  @media (min-width: 1440px) {
+    font-size: $font-size;
+  }
+}

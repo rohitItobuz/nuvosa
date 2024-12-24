@@ -1,0 +1,100 @@
+@import 'mixins';
+
+.optimising-heading {
+  @include section-heading();
+}
+
+.optimising-paragraph {
+  max-width: 560px;
+
+  @media (min-width: 1440px) {
+    max-width: 750px;
+  }
+
+  @include paragraph(#727272, 20px);
+}
+
+.optimising-card {
+  transition: all 0.4s ease;
+  max-width: 560px;
+
+  @media (min-width: 768px) {
+    width: 48.8%;
+  }
+
+  @media (min-width: 1200px) {
+    width: 23.8%;
+  }
+
+  &::after {
+    content: '';
+    width: 0px;
+    height: 4px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    transition: all 0.4s ease;
+    border-radius: 5px;
+  }
+
+  &:hover {
+    background-color: white;
+    box-shadow: 0px 0px 8px rgb(208, 207, 207);
+  }
+
+  &:nth-child(1):hover {
+    @include card-hover(#d38094);
+  }
+
+  &:nth-child(2):hover {
+    @include card-hover(#80d3a4);
+  }
+
+  &:nth-child(3):hover {
+    @include card-hover(#60c2f8);
+  }
+
+  &:nth-child(4):hover {
+    @include card-hover(#717ae0);
+  }
+}
+
+.optimising-card-number {
+  font-size: 230px;
+  top: 0px;
+  right: 20%;
+  color: #fafaff;
+}
+
+.optimising-ellipse {
+  top: 20px;
+  right: 0px;
+  width: 400px;
+
+  @media (min-width: 1024px) {
+    width: 450px;
+    right: -30px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 530px;
+    right: -50px;
+  }
+
+  @media (min-width: 1920px) {
+    width: unset;
+    right: -80px;
+  }
+}
+
+.optimising-card-text {
+  @include paragraph(#828282, 17px)
+}
+
+.optimising-card-heading {
+  font-size: 20px;
+
+  @media (min-width: 992px) {
+    font-size: 24px;
+  }
+}
