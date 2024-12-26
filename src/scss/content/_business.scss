@@ -17,16 +17,17 @@
 
 .business {
   background-color: #fafafa;
+  margin-top: 5rem;
   background-image: url(/src/images/design/bg-curve.svg);
   background-repeat: no-repeat;
   background-position: center;
-  margin-top: 5rem;
+
 
   .business-content-button {
     @include button();
 
     @media (min-width:1440px) {
-        padding: 20px 40px !important;
+      padding: 20px 40px !important;
     }
   }
 
